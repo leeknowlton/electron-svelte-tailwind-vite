@@ -6,7 +6,7 @@
   "main": "src/main/index.js",
   "scripts": {
     "start": "npm run build && npm run electron:dev",
-    "dev": "concurrently -k \"vite\" \"npm run electron:dev\"",
+    "dev": "concurrently -k \"vite src\" \"npm run electron:dev\"",
     "build": "vite build src",
     "preview": "vite preview",
     "electron:dev": "cross-env IS_DEV=true electron-forge start",

@@ -1,11 +1,11 @@
 <script>
-  import "../index.css";
+  import "../../index.css";
   import logo from "./assets/svelte.png";
   import Counter from "./lib/Counter.svelte";
 </script>
 
 <main>
-  <h1 class="text-red-500">Hello world!</h1>
+  <h1 class="text-red-800">Hello world!</h1>
 
   <Counter />
 
