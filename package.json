@@ -5,7 +5,6 @@
   "description": "My Electron application description",
   "main": "src/main/index.js",
   "scripts": {
-    "start": "npm run build && npm run electron:dev",
     "dev": "concurrently -k \"vite src\" \"npm run electron:dev\"",
     "build": "vite build src",
     "preview": "vite preview",
