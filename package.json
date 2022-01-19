@@ -1,0 +1,63 @@
+{
+  "name": "electron-forge-testapp",
+  "productName": "electron-forge-testapp",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "npm run build && npm run electron:dev",
+    "dev": "concurrently -k \"vite\" \"npm run electron:dev\"",
+    "build": "vite build src",
+    "preview": "vite preview",
+    "electron:dev": "cross-env IS_DEV=true electron-forge start",
+    "electron:build": "electron-forge make",
+    "electron:package": "electron-forge package"
+  },
+  "keywords": [],
+  "author": "lee",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_forge_testapp"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "electron": "16.0.7",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.2",
+    "vite": "^2.7.2"
+  }
+}
