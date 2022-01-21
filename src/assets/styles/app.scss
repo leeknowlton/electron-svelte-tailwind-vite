@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "purecss/build/pure.css";
+@import "tippy.js/dist/tippy.css"; // optional for styling
+@import "tippy.js/themes/light.css";
+@import "base";
+@import "app/elements";
+@import "app/layout";
+@import "components/tooltip";
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;

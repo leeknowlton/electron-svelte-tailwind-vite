@@ -1,10 +1,9 @@
 <script>
-  import "../../index.css";
   import Counter from "./lib/Counter.svelte";
 </script>
 
 <main>
-  <h1 class="text-red-800">Hello world!</h1>
+  <h1 class="text-red-800 btn btn-secondary">Hello world!</h1>
 
   <Counter />
 
@@ -19,5 +18,9 @@
   </p>
 </main>
 
-<style>
+<style lang="scss">
+  h1 {
+    background-color: $gray-200;
+    height: 100%;
+  }
 </style>

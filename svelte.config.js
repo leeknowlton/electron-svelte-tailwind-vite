@@ -3,7 +3,11 @@
 const sveltePreprocess = require("svelte-preprocess");
 
 module.exports = {
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
-  preprocess: sveltePreprocess(),
+  preprocess: [
+    sveltePreprocess({
+      scss: {
+        prependData: '@use "src/assets/styles/_base.scss" as *;',
+      },
+    }),
+  ],
 };

@@ -7,5 +7,9 @@ export default defineConfig({
   build: {
     outDir: "main/build",
   },
-  plugins: [svelte()],
+  plugins: [
+    svelte({
+      configFile: "../svelte.config.js",
+    }),
+  ],
 });

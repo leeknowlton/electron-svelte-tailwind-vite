@@ -1,0 +1,230 @@
+//
+// Elements
+//
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit
+}
+
+body {
+  background: $gray-100;
+  color: $gray-900;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: $f2;
+  height: 100%;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+a {
+  color: $purple-700;
+  text-decoration: none;
+
+  &:hover {
+    color: $purple-700;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: $f4;
+}
+
+h2 {
+  font-size: $f3;
+}
+
+h3 {
+  font-size: $f2;
+}
+h1, h2, h3 {
+  line-height: 1.2;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+//
+// Buttons
+//
+
+.btn {
+  font-weight: 500;
+  border-radius: 2px;
+  border: none;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-xs {
+  font-size: $f2;
+  font-weight: normal;
+}
+
+.btn-sm {
+  font-size: $f2;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.btn-lg {
+  font-size: $f4;
+  padding: 8px 32px;
+  font-weight: normal;
+}
+
+.btn-xxl {
+  font-size: $f7;
+  padding: 24px 40px;
+}
+
+.btn-primary {
+  color: $teal-100;
+  background-color: $teal-500;
+
+  &:hover {
+    color: $teal-100;
+    background: $teal-600;
+    border: none;
+  }
+
+  &:disabled {
+    color: $teal-100;
+    background: $teal-400;
+    border: none;
+  }
+}
+
+.btn-primary-gray {
+  color: $gray-100;
+  background-color: $gray-500;
+
+  &:hover {
+    color: $gray-100;
+    background: $gray-600;
+    border: none;
+  }
+
+  &:disabled {
+    color: $gray-100;
+    background: $gray-400;
+    border: none;
+  }
+}
+
+.btn-secondary {
+  color: $teal-500;
+  background: none;
+  border: 1px solid $teal-300;
+
+  &:hover{
+    color: $teal-100;
+    background: $teal-500;
+    border: 1px solid $teal-500;
+  }
+}
+
+.btn-tertiary {
+  color: $teal-500;
+  background: none;
+}
+
+.btn-warning {
+  color: $red-100;
+  background-color: $red-600;
+
+  &:hover{
+    color: $red-100;
+    background: $red-700;
+    border: none;
+  }
+}
+
+.btn-warning-secondary {
+  color: $red-600;
+  background: none;
+  border: 1px solid $gray-400;
+
+  &:hover{
+    color: $red-100;
+    background: $red-600;
+    border: 1px solid $red-600;
+  }
+}
+
+.btn-warning-tertiary {
+  color: $gray-600;
+  background: none;
+  font-weight: normal;
+}
+//
+// Utilities
+//
+
+// ----- Loading Screen and Animation
+.loading-screen {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: $purple-500 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
